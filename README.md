@@ -12,8 +12,9 @@
  * User-Friendly
  * Clears Status on Stop   
  
- 
- ![screenshot.png](screenshot.png)
+![screenshot.png](screenshot.png)
+![example.png](example.png)
+
 ***
 ### How to obtain your token
 **1.** Press **Ctrl+Shift+I** (⌘⌥I on Mac) on Discord to show developer tools<br/>

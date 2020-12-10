@@ -12,7 +12,10 @@
  * User-Friendly
  * Clears Status on Stop   
  
+# Sreenshots
+Main Program:
 ![screenshot.png](screenshot.png)
+OBS Output Example:  
 ![example.png](example.png)
 
 ***

@@ -9,6 +9,7 @@
  * Minimal Spam
  * Maintains Status on Pause
  * Cross-platform Friendly
+ * User-Friendly
  * Clears Status on Stop   
  
  

@@ -12,7 +12,8 @@
  * User-Friendly
  * Clears Status on Stop   
  
-# Sreenshots
+*** 
+### Sreenshots
 Main Program:
 ![screenshot.png](screenshot.png)
 OBS Output Example:  

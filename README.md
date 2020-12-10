@@ -4,8 +4,8 @@
  
  * Minimal Status Spam
  * OBS Text GDI+ Output
- * Maintains status on pause
- * Clears status on stop    
+ * Maintains Status on Pause
+ * Clears Status on Stop    
  
  
  ![screenshot.png](screenshot.png)

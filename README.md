@@ -12,7 +12,7 @@
  * User-Friendly
  * Clears Status on Stop   
  
-*** 
+***
 ### Sreenshots
 Main Program:
 ![screenshot.png](screenshot.png)

@@ -1,4 +1,5 @@
 # VDONPU
+***
 [![GitHub release](https://img.shields.io/github/v/release/noto-rious/VDONPU?style=plastic)](https://github.com/noto-rious/VDONPU/releases) [![GitHub All Releases](https://img.shields.io/github/downloads/noto-rious/VDONPU/total?style=plastic)](https://github.com/noto-rious/VDONPU/releases)
 
  VLC Discord & OBS Now Playing Utility  

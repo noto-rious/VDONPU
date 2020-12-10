@@ -1,9 +1,10 @@
 # VDONPU
  VLC Discord & OBS Now Playing Utility  
- Written in Python 3.9.1  
+ Written in Python 3.9.1 
  
- * Minimal Status Spam
+ * Discord Status Update
  * OBS Text GDI+ Output
+ * Minimal Spam
  * Maintains Status on Pause
  * Clears Status on Stop    
  

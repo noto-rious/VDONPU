@@ -12,7 +12,7 @@ from colored import fg, bg, attr
 
 
 """
-Self-script which updates your current game playing as well as an obs.txt output for text gdi with your current music playing from VLC.
+Self-script which updates your current game playing on Discord as well as an obs.txt output for Text GDI+ on OBS with your current music playing from VLC.
 """
 
 green = fg('#4EC98F')
@@ -83,6 +83,7 @@ passw = str(jdata['vlc_password'])
 if passw == "":
     passw = getpass(f"{res}{orangeBG}{white}{BOLD}What is your VLC WEB Lua password?:") #shhh I know it's insecure
     jdata['vlc_password'] = str(passw)
+    print(f'{res}{lavender}{BOLD}------')
     with open(jfile, 'w') as outfile:
         json.dump(jdata, outfile)
 
@@ -172,6 +173,21 @@ async def updateSong(alreadyplaying):
     else:
         nowplaying = None
 
+
+    #obs gdi update
+    if nowplaying != None and len(nowplaying) > 2 and position != old_position:
+        tailingspaces = ""
+        file1 = open(application_path + "obs.txt","w", encoding="utf-8") 
+        for chars in range(len(nowplaying) + len(f"({position}/{durration})")):
+            tailingspaces = tailingspaces + " "
+        file1.write(f"{nowplaying} ({position}/{durration}){tailingspaces}")
+        file1.close()
+        old_position = position
+    else:
+        file1 = open(application_path + "obs.txt","w", encoding="utf-8") 
+        file1.write('\n')
+        file1.close()
+
     if nowplaying != alreadyplaying and paused == False: #keep the requests to discord server down
         alreadyplaying = nowplaying
         activity = None
@@ -186,20 +202,6 @@ async def updateSong(alreadyplaying):
             sys.stdout.write("\x1b];VLC Discord & OBS Now Playing Utility - No Media Currently Playing...\x07")
             print(f"{res}{lavender}{BOLD}[✘] Discord Status Cleared.")
         await bot.change_presence(activity=activity)
-
-        #obs gdi update
-        if nowplaying != None and len(nowplaying) > 2 and position != old_position:
-            tailingspaces = ""
-            file1 = open(application_path + "obs.txt","w", encoding="utf-8") 
-            for chars in range(len(nowplaying) + len(f"({position}/{durration})")):
-                tailingspaces = tailingspaces + " "
-            file1.write(f"{nowplaying} ({position}/{durration}){tailingspaces}")
-            file1.close()
-            old_position = position
-        else:
-            file1 = open(application_path + "obs.txt","w", encoding="utf-8") 
-            file1.write('\n')
-            file1.close()
 
     return alreadyplaying
     

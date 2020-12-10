@@ -8,7 +8,8 @@
  * OBS Text GDI+ Output
  * Minimal Spam
  * Maintains Status on Pause
- * Clears Status on Stop    
+ * Cross-platform Friendly
+ * Clears Status on Stop   
  
  
  ![screenshot.png](screenshot.png)

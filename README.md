@@ -8,9 +8,9 @@
  * OBS Text GDI+ Output
  * Minimal Spam
  * Maintains Status on Pause
+ * Clears Status on Stop
  * Cross-platform Friendly
- * User-Friendly
- * Clears Status on Stop   
+ * User-Friendly   
  
 ***
 ### Sreenshots

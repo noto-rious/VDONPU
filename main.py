@@ -126,13 +126,13 @@ async def updateSong(alreadyplaying):
         if ('401 Client error' in r.text):
             if clientError != True:
                 clientError = True
-                print(f"{res}{orangeBG}{white}{BOLD}web interface error, do passwords match?")
+                print(f"{res}{orangeBG}{white}{BOLD}web interface error, do passwords match?{res}")
             return
     except:
         if clientError != True:
             clientError = True
             await bot.change_presence(activity=None)
-            print(f"{orangeBG}{white}{BOLD}web interface error: is VLC running? is web interface enabled?")
+            print(f"{orangeBG}{white}{BOLD}web interface error: is VLC running? is web interface enabled?{res}")
         return
     artist = ""
     song = ""
@@ -195,12 +195,12 @@ async def updateSong(alreadyplaying):
         #discord status update
         if nowplaying != None and len(nowplaying) > 2:
             sys.stdout.write("\x1b];"+nowplaying+"\x07") #write song to terminal title
-            print(f"{res}{lavenderBG}{white}{BOLD}[✔] Discord Status Updated: {nowplaying} ({durration})")
+            print(f"{res}{lavenderBG}{white}{BOLD}[✔] Discord Status Updated: {nowplaying} ({durration}){res}")
             activity = discord.Activity(type=discord.ActivityType.playing, name=f"🎶{nowplaying} ({durration})🎶")
         else:
             activity = None
             sys.stdout.write("\x1b];VLC Discord & OBS Now Playing Utility - No Media Currently Playing...\x07")
-            print(f"{res}{lavender}{BOLD}[✘] Discord Status Cleared.")
+            print(f"{res}{lavender}{BOLD}[✘] Discord Status Cleared.{res}")
         await bot.change_presence(activity=activity)
 
     return alreadyplaying
